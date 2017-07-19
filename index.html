@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quotes">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quote Generator</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="quotes.js"></script>
+
+    <script src="https://use.fontawesome.com/f209cde02b.js"></script>
+
+  </head>
+  <body>
+
+    <div class="mainbox" ng-controller='QuoteController'>
+
+      <div class="quotebox">
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        <span id="quotetext"><p>{{currentQuoteText}}</p></span>
+      </div>
+
+      <div class="attributionbox">
+        <p id="attribution">{{currentQuoteAttribution}}</p>
+      </div>
+
+      <div class="buttonbox">
+        <button type="button" class="" id="tweetbutton" ng-click="postToTwitter()"><i class="fa fa-twitter" aria-hidden="true"></i></button>
+        <button type="button" class="" id="quotebutton" ng-click="getQuote()">New Quote</button>
+      </div>
+
+    </div>
+
+  </body>
+</html>
